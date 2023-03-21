@@ -3,6 +3,9 @@ from flask_socketio import SocketIO, emit
 import random, string, collections, time
 from fastcore.utils import *
 from urllib.parse import urlparse
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -55,5 +58,6 @@ def handle_disconnect():
 @patch
 def count(self:L): return len(self)
 
-socketio.run(app)
-
+if __name__ == '__main__':
+    logger.info('Running socket IO')
+    socketio.run(app, port=80)
