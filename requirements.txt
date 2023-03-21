@@ -4,3 +4,4 @@ simple-websocket
 gevent
 gevent-websocket
 fastcore
+Gunicorn
