@@ -60,4 +60,4 @@ def count(self:L): return len(self)
 
 if __name__ == '__main__':
     logger.info('Running socket IO')
-    socketio.run(app, port=80)
+    socketio.run(app)
